@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+    
+    {% load static %}
+
+     {% block body %}
+<main id="main-content" class="body-container-wrapper mt-4">
+<div class="container-fluid body-container body-container--blog-index">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 dnd_area-row-0-max-width-section-centering dnd_area-row-0-background-color dnd-section dnd_area-row-0-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 dnd_area-row-1-padding dnd_area-row-1-vertical-alignment dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell dnd-column dnd_area-column-3-vertical-alignment" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row dnd_area-column-3-row-0-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><section class="blog-index">
+  
+
+    {%for allcposts in allcpost%}
+    <!-- post -->
+    <div class="post thumb-250 post-grid rounded bordered blog-index__post--small blog-index__post">
+        
+        <div class="thumb top-rounded">
+            
+              <a href="../../category/{{allcposts.category_id.category_slug}}" class="category-badge position-absolute">{{allposts.category_id}}</a>
+            
+            <a href="../16-unheard-ways-to-achieve-greater-walker.html">
+                <div class="inner">
+                    <img src="{{allcposts.image.url}}" alt="{{allcposts.imagealt}}" height="395" width="550">
+                </div>
+            </a>
+        </div>
+        
+        <div class="details">
+            <ul class="meta list-inline mb-0">
+                <li class="list-inline-item"><div class="author-wrapper"><img width="80" height="80" src="../../../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/about148c.jpg?width=80&amp;height=80&amp;name=about.jpg" class="author" alt="Katen Doe"></div>{{allcposts.author.first_name}} {{allcposts.author.last_name}}</li>
+                <li class="list-inline-item">{{allcposts.updated_on}}</li>
+            </ul>
+            <h4 class="post-title mb-3 mt-3"><a href="../../post/{{allcposts.slug}}">{{allcposts.title}}</a></h4>
+            <p>{{allcposts.post_description|slice:100}}</p>
+        </div>
+        <div class="post-bottom clearfix d-flex align-items-center">
+          <div class="social-share me-auto">
+              <button class="toggle-button icon-share"></button>
+              <ul class="icons list-unstyled list-inline mb-0">
+                <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a target="_blank" href="https://twitter.com/intent/tweet?url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="list-inline-item"><a target="_blank" href="https://pinterest.com/pin/create/button/?url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a target="_blank" href="mailto:info@example.com?&amp;subject=&amp;cc=&amp;bcc=&amp;body=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="far fa-envelope"></i></a></li>
+              </ul>
+          </div>
+          <div class="more-button float-end">
+              <a href="../16-unheard-ways-to-achieve-greater-walker.html"><span class="icon-options"></span></a>
+          </div>
+      </div>
+    </div>
+{%endfor%}
+
+  
+</section></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  <nav aria-label="Pagination" role="navigation" class="blog-pagination">
+    
+    
+        
+    
+
+    
+    <a class="blog-pagination__link blog-pagination__prev-link blog-pagination__prev-link--disabled">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512" width="13" aria-hidden="true"><g id="chevron-left1_layer"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" /></g></svg>
+    </a>
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        <a class="blog-pagination__link blog-pagination__number-link blog-pagination__link--active" aria-label="Go to Page 1" aria-current="true" href="../../katen.html">1</a>
+      
+    
+      
+      
+        <a class="blog-pagination__link blog-pagination__number-link " aria-label="Go to Page 2" href="katen-doe/page/2.html">2</a>
+      
+    
+    
+
+    
+    <a class="blog-pagination__link blog-pagination__next-link " href="katen-doe/page/2.html">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512" width="13" aria-hidden="true"><g id="chevron-right2_layer"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" /></g></svg>
+    </a>
+    
+
+  </nav>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+</main>
+
+{% endblock body %}

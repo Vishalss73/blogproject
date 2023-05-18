@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+    
+    {% load static %}
+
+     {% block body %}
+<div class="container py-4">
+
+    <!-- Bootstrap 5 starter form -->
+    <form action="/contact" method="POST" id="contactForm">
+        {% csrf_token %}
+      <!-- Name input -->
+      <div class="mb-3">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" name="name" id="name" type="text" placeholder="Name" required />
+      </div>
+  
+      <!-- Email address input -->
+      <div class="mb-3">
+        <label class="form-label" for="emailAddress">Email Address</label>
+        <input class="form-control" name="email" id="emailAddress" type="email" placeholder="Email Address"  required/>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="emailAddress">Subject</label>
+        <input class="form-control"  name="subject" id="text" type="text" placeholder="Subject"  required/>
+      </div>
+  
+      <!-- Message input -->
+      <div class="mb-3">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-control" name="message" id="message" type="text" placeholder="Message" style="height: 10rem;" required></textarea>
+      </div>
+  
+      <!-- Form submit button -->
+      <div class="d-grid">
+        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+      </div>
+  
+    </form>
+  
+  </div>
+  {% endblock body %}

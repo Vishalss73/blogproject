@@ -1,0 +1,1219 @@
+<!doctype html><html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  {% load static %}
+    <meta charset="utf-8">
+
+        {% for post in home %}
+    <title>{{post.title}}</title>
+    {% endfor %}
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta property="og:title" content="Home">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Home">
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<link rel="stylesheet" href="{% static '/assets/template_assets/blog.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523622290/1667538682927/katen/css/main.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523700784/1667538679480/katen/css/plugins/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523997778/1667538684871/katen/css/plugins/all.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523622308/1667538678462/katen/css/plugins/slick.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523997777/1667538684021/katen/css/plugins/simple-line-icons.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523997776/1667538680504/katen/css/app.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/template_assets/47523630349/1667538681930/katen/css/theme-overrides.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/module_assets/47523630255/1621839306089/module_47523630255_social-follow.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/module_assets/47547642976/1621839305970/module_47547642976_katen_search_input.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/module_assets/47611044387/1667537644586/module_47611044387_post-tabs.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/module_assets/47721658380/1621693702605/module_47721658380_widget-about.min.css' %}">
+<link rel="stylesheet" href="{% static '/assets/module_assets/47721164090/1621839306174/module_47721164090_widget-subscribe.min.css' %}">
+<!-- Editor Styles -->
+<style id="hs_editor_style" type="text/css">
+/* HubSpot Non-stacked Media Query Styles */
+@media (min-width:768px) {
+  .footer-row-0-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .footer-column-5-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .footer-column-5-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .footer-column-3-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .footer-column-3-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .footer-column-1-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .footer-column-1-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+}
+/* HubSpot Styles (default) */
+.dnd_area-row-0-margin {
+  margin-top: 0px !important;
+  margin-bottom: 60px !important;
+}
+.dnd_area-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-row-1-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.dnd_area-row-1-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-3-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 15px !important;
+}
+.dnd_area-column-1-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 15px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 15px !important;
+}
+.dnd_area-column-11-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-1-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-2-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-3-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-4-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-5-padding {
+  padding-top: 0px !important;
+  padding-bottom: 40px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-11-row-6-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 15px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 50px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-row-1-padding {
+  padding-top: 0px !important;
+  padding-bottom: 50px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-row-2-padding {
+  padding-top: 0px !important;
+  padding-bottom: 50px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-row-3-padding {
+  padding-top: 0px !important;
+  padding-bottom: 50px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dnd_area-column-5-row-4-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.footer-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+/* HubSpot Styles (mobile) */
+@media (max-width: 767px) {
+  .dnd_area-column-3-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-column-1-padding {
+    padding-top: 0px !important;
+    padding-bottom: 30px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-column-11-padding {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .dnd_area-column-5-padding {
+    padding-top: 0px !important;
+    padding-bottom: 30px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+</style>
+<style>
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("_hcms/googlefonts/Roboto/regular.woff2") format("woff2"), url("_hcms/googlefonts/Roboto/regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("_hcms/googlefonts/Poppins/regular.woff2") format("woff2"), url("_hcms/googlefonts/Poppins/regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("_hcms/googlefonts/Poppins/regular.woff2") format("woff2"), url("_hcms/googlefonts/Poppins/regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("_hcms/googlefonts/Poppins/700.woff2") format("woff2"), url("_hcms/googlefonts/Poppins/700.woff") format("woff");
+  }
+</style>
+
+    
+
+    
+    <link rel="canonical" href="home.html">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:url" content="http://themeger-20055220.hs-sites.com/home">
+<meta name="twitter:card" content="summary">
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+  
+    <!-- site wrapper -->
+    <div class="site-wrapper">
+
+      <div class="main-overlay"></div>
+      
+        <div data-global-resource-path="katen/templates/partials/header.html"><!-- header -->
+<header class="header-default">
+  
+  <div class="container-fluid content-wrapper">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-xl">
+
+      
+      <!-- site logo -->
+      <div id="hs_cos_wrapper_site_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_site_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="/" id="hs-link-site_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="https://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/logo-1.svg" class="hs-image-widget " style="width:118px;border-width:0px;border:0px;" width="118" alt="" title=""></a></span>
+</div>
+      
+
+      <div class="collapse navbar-collapse">
+        <!-- menus -->
+        <div id="hs_cos_wrapper_navigation-primary" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+<nav aria-label="Main menu" class="navigation-primary">
+  
+  
+  <ul class="submenu level-1">
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="home.html" class="menu-link active-item" aria-current="page">Home</a>
+
+    
+  </li>
+
+    
+   {%for categories in category%}
+    {% if categories.post_count > 0 %}   
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="/category/{{categories.category_slug}}" class="menu-link">{{categories.category_title}}</a>
+
+    
+  </li>
+  {%endif%}
+  {% endfor %}
+
+
+    
+  </ul>
+
+</nav></div>
+      </div>
+
+      <!-- header right section -->
+      <div class="header-right d-flex align-items-center">
+        <!-- social icons -->
+        <div class="social-icons">
+          <div id="hs_cos_wrapper_social-follow" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-icons list-unstyled list-inline mb-0">
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 264 512" aria-labelledby="facebook-f1" role="img"><title id="facebook-f1">Follow us on Facebook</title><g id="facebook-f1_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter2" role="img"><title id="twitter2">Follow us on Twitter</title><g id="twitter2_layer"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow__3" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram3" role="img"><title id="instagram3">Follow us on Instagram</title><g id="instagram3_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.pinterest.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512" aria-labelledby="pinterest4" role="img"><title id="pinterest4">Follow us on Pinterest</title><g id="pinterest4_layer"><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.medium.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow__5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="medium5" role="img"><title id="medium5">Follow us on Medium</title><g id="medium5_layer"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_social-follow__6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-labelledby="youtube6" role="img"><title id="youtube6">Follow us on Facebook</title><g id="youtube6_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></g></svg></span>
+      </a>
+    </li>
+  
+  </ul></div>
+        </div>
+        <!-- header buttons -->
+        <div class="header-buttons">
+          <button class="search icon-button">
+            <i class="icon-magnifier"></i>
+          </button>
+          <button class="burger-menu icon-button">
+            <span class="burger-icon"></span>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- search popup area -->
+<div class="search-popup">
+  <!-- close button -->
+  <button type="button" class="btn-close" aria-label="Close"></button>
+  <!-- content -->
+  <div class="search-content">
+    <div class="text-center">
+      <h3 class="mb-4 mt-0">Press ESC to close</h3>
+    </div>
+    <!-- form -->
+    <div id="hs_cos_wrapper_module_16215108635584" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<div class="hs-search-field"> 
+    <div class="hs-search-field__bar">
+      <form class="d-flex search-form" action="https://themeger-20055220.hs-sites.com/katen-search-results">
+        
+        <input type="text" class="form-control me-2" name="term" autocomplete="off" aria-label="Search" placeholder="Search and press enter ...">
+        
+        
+          <input type="hidden" name="type" value="SITE_PAGE">
+        
+        
+        
+          <input type="hidden" name="type" value="BLOG_POST">
+          <input type="hidden" name="type" value="LISTING_PAGE">
+        
+        
+
+        <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
+      </form>
+    </div>
+    <ul class="hs-search-field__suggestions"></ul>
+</div></div>
+  </div>
+</div>
+
+<!-- canvas menu -->
+<div class="canvas-menu d-flex align-items-end flex-column">
+  <!-- close button -->
+  <button type="button" class="btn-close" aria-label="Close"></button>
+
+  <!-- logo -->
+  <div class="logo">
+    <div id="hs_cos_wrapper_site_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_site_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="/" id="hs-link-site_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="https://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/logo-1.svg" class="hs-image-widget " style="width:118px;border-width:0px;border:0px;" width="118" alt="" title=""></a></span>
+</div>
+  </div>
+
+  <!-- menu -->
+  <div class="vertical-menu-outer">
+    <div id="hs_cos_wrapper_module_16215069930957" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav aria-label="Main menu">
+  
+  
+  <ul class="vertical-menu level-1">
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="home.html" class="menu-link active-item" aria-current="page">Home</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="katen.html" class="menu-link">Blog Archive</a>
+
+    
+  </li>
+
+    
+      
+  <li class="has-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="javascript:;" class="menu-link">Pages</a>
+
+    
+      <input type="checkbox" id="Pages" class="submenu-toggle">
+      <label class="menu-arrow" for="Pages">
+        <span class="menu-arrow-bg"></span>
+      </label>
+      
+  
+  <ul class="vertical-menu level-2">
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="katen/your-light-is-about-to-stop-being-relevant.html" class="menu-link">Single Post</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="katen/tag/culture.html" class="menu-link">Tag Page</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="katen/author/katen-doe.html" class="menu-link">Author Page</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="pricing.html" class="menu-link">Pricing</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="landing-page.html" class="menu-link" target="_blank" rel="noopener">Landing Page</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="contact.html" class="menu-link">Contact</a>
+
+    
+  </li>
+
+    
+  </ul>
+
+    
+  </li>
+
+    
+      
+  <li class="has-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="javascript:;" class="menu-link">System Pages</a>
+
+    
+      <input type="checkbox" id="System Pages" class="submenu-toggle">
+      <label class="menu-arrow" for="System Pages">
+        <span class="menu-arrow-bg"></span>
+      </label>
+      
+  
+  <ul class="vertical-menu level-2">
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource0c31.html?path=Katen/templates/system/404.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">404</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource9fb1.html?path=Katen/templates/system/500.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">500</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource5f2b.html?path=Katen/templates/system/backup-unsubscribe.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">Backup Unsubscribe</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource5e1d.html?path=Katen/templates/system/password-prompt.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">Password Prompt</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource72cd.html?path=Katen/templates/system/subscription-preferences.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">Subscription Preferences</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="_hcms/raw-resource6144.html?path=Katen/templates/system/subscriptions-confirmation.html&amp;portalId=20055220&amp;t=1621781940381" class="menu-link">Subscriptions Confirmation</a>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="hs-search-results1590.html?term=Future&amp;type=SITE_PAGE&amp;type=BLOG_POST&amp;type=LISTING_PAGE" class="menu-link">Search Result</a>
+
+    
+  </li>
+
+    
+  </ul>
+
+    
+  </li>
+
+    
+      
+  <li class="no-submenu menu-item hs-skip-lang-url-rewrite">
+    <a href="contact.html" class="menu-link">Contact</a>
+
+    
+  </li>
+
+    
+  </ul>
+
+</nav></div>
+  </div>
+
+  <div class="mt-auto w-100">
+    <div id="hs_cos_wrapper_canvas-social" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-icons list-unstyled list-inline mb-0">
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 264 512" aria-labelledby="facebook-f1" role="img"><title id="facebook-f1">Follow us on Facebook</title><g id="facebook-f1_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter2" role="img"><title id="twitter2">Follow us on Twitter</title><g id="twitter2_layer"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social__3" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram3" role="img"><title id="instagram3">Follow us on Instagram</title><g id="instagram3_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.pinterest.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512" aria-labelledby="pinterest4" role="img"><title id="pinterest4">Follow us on Facebook</title><g id="pinterest4_layer"><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.medium.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social__5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="medium5" role="img"><title id="medium5">Follow us on Facebook</title><g id="medium5_layer"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" /></g></svg></span>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <li class="list-inline-item">
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <span id="hs_cos_wrapper_canvas-social__6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-labelledby="youtube6" role="img"><title id="youtube6">Follow us on Facebook</title><g id="youtube6_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></g></svg></span>
+      </a>
+    </li>
+  
+  </ul></div>
+  </div>
+</div></div>
+{% for message in messages %}
+<div class="container">
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>Action : </strong>{{message}}
+</div>
+</div>{% endfor %}
+
+{% block body %}
+      
+  {% endblock body %}
+  <div data-global-resource-path="katen/templates/partials/footer.html"><footer class="footer">
+    <div class="footer-inner">
+      <div class="d-flex align-items-center gy-4">
+        <div class="container-fluid">
+  <div class="row-fluid-wrapper">
+  <div class="row-fluid">
+  <div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-1 footer-row-0-vertical-alignment dnd-section footer-row-0-padding">
+  <div class="row-fluid ">
+  <div class="span4 widget-span widget-type-cell footer-column-1-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4">
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+  <div id="hs_cos_wrapper_footer-module-2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-2_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+    {% for post in home %}
+    <span class="copyright">{{post.copyright}}</span>
+    {% endfor %}
+  </span></div>
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+  </div><!--end widget-span -->
+  <div class="span4 widget-span widget-type-cell footer-column-3-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4">
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+  <div id="hs_cos_wrapper_footer-module-4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-icons list-unstyled list-inline mb-0">
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 264 512" aria-labelledby="facebook-f1" role="img"><title id="facebook-f1">Follow us on Facebook</title><g id="facebook-f1_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter2" role="img"><title id="twitter2">Follow us on Twitter</title><g id="twitter2_layer"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4__3" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram3" role="img"><title id="instagram3">Follow us on Instagram</title><g id="instagram3_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512" aria-labelledby="pinterest4" role="img"><title id="pinterest4">Follow us on Facebook</title><g id="pinterest4_layer"><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.medium.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4__5" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="medium5" role="img"><title id="medium5">Follow us on Facebook</title><g id="medium5_layer"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+  
+      
+        
+      
+  
+      <li class="list-inline-item">
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_footer-module-4__6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-labelledby="youtube6" role="img"><title id="youtube6">Follow us on Facebook</title><g id="youtube6_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></g></svg></span>
+        </a>
+      </li>
+    
+    </ul></div>
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+  </div><!--end widget-span -->
+  <div class="span4 widget-span widget-type-cell footer-column-5-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+  
+  <div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-row">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+  <div id="hs_cos_wrapper_footer-module-6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-6_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><a href="#" id="return-to-top" class="float-md-end"><i class="icon-arrow-up"></i>Back to Top</a></span></div>
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  
+  </div><!--end widget-span -->
+  </div>
+  </div>
+  </div>
+      </div>
+    </div>
+  </footer></div>
+        
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  <script>
+  (function () {
+      window.addEventListener('load', function () {
+          setTimeout(function () {
+              var xhr = new XMLHttpRequest();
+              xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+              xhr.setRequestHeader("Content-type", "application/json");
+              xhr.onreadystatechange = function () {
+                  // do nothing.
+              };
+              var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+              function populateNetworkInfo(name, connection, info) {
+                  if (name in connection) {
+                      info[name] = connection[name];
+                  }
+              }
+              var networkInfo = {};
+              if (connection) {
+                  ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                      populateNetworkInfo(name, connection, networkInfo);
+                  });
+              }
+              var perfData = {
+                  url: location.href,
+                  portal: 20055220,
+                  content: 47782538848,
+                  group: -1,
+                  connection: networkInfo,
+                  timing: performance.timing
+              };
+              xhr.send(JSON.stringify(perfData));
+          }, 3000);  // Execute this 3 seconds after onload.
+      });
+  })();
+  </script>
+  
+  <script src="{% static '/assets/template_assets/47523032197/1667538683567/katen/js/jquery.min.js' %}"></script>
+  <script src="{% static '/assets/template_assets/47523700551/1667538683720/katen/js/popper.min.js' %}"></script>
+  <script src="{% static '/assets/template_assets/47523895164/1667538685048/katen/js/bootstrap.min.js' %}"></script>
+  <script src="{% static '/assets/template_assets/47523928246/1667538686541/katen/js/slick.min.js' %}"></script>
+  <script src="{% static '/assets/template_assets/47523894835/1667538679404/katen/js/custom.min.js' %}"></script>
+  <script src="{% static '/assets/template_assets/47523630350/1667538678988/katen/js/main.min.js' %}"></script>
+  <script>
+  var hsVars = hsVars || {}; hsVars['language'] = 'en';
+  </script>
+  
+  <script src="../static.hsappstatic.net/cos-i18n/static-1.53/bundles/project.js"></script>
+  <script src="{% static '/assets/module_assets/47523895689/1667538064332/module_47523895689_menu-section.min.js' %}"></script>
+  
+      <!--[if lte IE 8]>
+      <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+  
+  <script data-hs-allowed="true" src="_hcms/forms/v2.js"></script>
+  
+      <script data-hs-allowed="true">
+          var options = {
+              portalId: '20055220',
+              formId: '54a557ee-c845-417b-82c1-78bb9fa0f5f3',
+              formInstanceId: '2524',
+              pageId: '47782538848',
+              region: 'na1',
+              
+              
+              
+              
+              pageName: "Home",
+              
+              
+              
+              inlineMessage: "Thanks for submitting the form.",
+              
+              
+              rawInlineMessage: "Thanks for submitting the form.",
+              
+              
+              hsFormKey: "22e347af2787a5bd2f395d151936ec3d",
+              
+              
+              css: '',
+              target: '#hs_form_target_form_651497037',
+              
+              
+              
+              
+              
+              contentType: "standard-page",
+              
+              
+              
+              formsBaseUrl: '/_hcms/forms/',
+              
+              
+              
+              formData: {
+                  cssClass: 'hs-form stacked hs-custom-form'
+              }
+          };
+  
+          options.getExtraMetaDataBeforeSubmit = function() {
+              var metadata = {};
+              
+  
+              if (hbspt.targetedContentMetadata) {
+                  var count = hbspt.targetedContentMetadata.length;
+                  var targetedContentData = [];
+                  for (var i = 0; i < count; i++) {
+                      var tc = hbspt.targetedContentMetadata[i];
+                       if ( tc.length !== 3) {
+                          continue;
+                       }
+                       targetedContentData.push({
+                          definitionId: tc[0],
+                          criterionId: tc[1],
+                          smartTypeId: tc[2]
+                       });
+                  }
+                  metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+              }
+  
+              return metadata;
+          };
+  
+          hbspt.forms.create(options);
+      </script>
+  
+  
+  <!-- Start of HubSpot Analytics Code -->
+  <script type="text/javascript">
+  var _hsq = _hsq || [];
+  _hsq.push(["setContentType", "standard-page"]);
+  _hsq.push(["setCanonicalUrl", "http:\/\/themeger-20055220.hs-sites.com\/home"]);
+  _hsq.push(["setPageId", "47782538848"]);
+  _hsq.push(["setContentMetadata", {
+      "contentPageId": 47782538848,
+      "legacyPageId": "47782538848",
+      "contentFolderId": null,
+      "contentGroupId": null,
+      "abTestId": null,
+      "languageVariantId": 47782538848,
+      "languageCode": "en",
+      
+  }]);
+  </script>
+  
+  <script type="text/javascript" id="hs-script-loader" async defer src="hs/scriptloader/20055220.js"></script>
+  <!-- End of HubSpot Analytics Code -->
+  
+  
+  <script type="text/javascript">
+  var hsVars = {
+      ticks: 1670491054301,
+      page_id: 47782538848,
+      
+      content_group_id: 0,
+      portal_id: 20055220,
+      app_hs_base_url: "https://app.hubspot.com",
+      cp_hs_base_url: "https://cp.hubspot.com",
+      language: "en",
+      analytics_page_type: "standard-page",
+      analytics_page_id: "47782538848",
+      category_id: 1,
+      folder_id: 0,
+      is_hubspot_user: false
+  }
+  </script>
+  
+  
+  <script defer src="../static.hsappstatic.net/HubspotToolsMenu/static-1.138/js/index.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+  
+    
+  </body>
+  <!-- Mirrored from themeger-20055220.hs-sites.com/home by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Dec 2022 09:20:40 GMT -->
+  </html>

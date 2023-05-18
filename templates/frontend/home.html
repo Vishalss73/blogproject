@@ -1,0 +1,808 @@
+{% extends "base.html" %}
+    
+    {% load static %}
+
+     {% block body %}
+      
+<main id="main-content" class="body-container-wrapper">
+  
+  <div class="container-fluid body-container body-container--home">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 dnd_area-row-0-margin dnd-section dnd_area-row-0-padding">
+<div class="row-fluid ">
+<div class="span8 widget-span widget-type-cell dnd_area-column-1-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="8">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  {%for allpopular in popularpost %}
+      {%if forloop.counter < 2%}
+    <!-- featured post large -->
+    <div class="post featured-post-lg">
+      <div class="details clearfix">
+        
+          <a href="category{{category_id.category_slug}}" class="category-badge">{{allpopular.category_id}}</a>
+        
+        <h2 class="post-title"><a href="post/{{allpopular.slug}}">{{allpopular.title}}</a></h2>
+        <ul class="meta list-inline mb-0">
+          <li class="list-inline-item">{{allpopular.author.first_name}} {{allpopular.author.last_name}}</li>
+          <li class="list-inline-item">{{allpopular.updated_on}}</li>
+        </ul>
+      </div>
+      <a href="post/{{allpopular.slug}}">
+        <div class="thumb rounded">
+          <div class="inner data-bg-image" data-bg-image="{{allpopular.image.url}}"></div>
+        </div>
+      </a>
+    </div>
+    {%endif%}
+    {%endfor%}
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell dnd_area-column-3-padding dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="post-tabs rounded bordered">
+  <!-- tab navs -->
+  <ul class="nav nav-tabs nav-pills nav-fill" id="postsTab" role="tablist">
+    <li class="nav-item" role="presentation"><button aria-controls="popular" aria-selected="true" class="nav-link active" data-bs-target="#recent" data-bs-toggle="tab" id="recent-tab" role="tab" type="button">Recent</button></li>
+    <li class="nav-item" role="presentation"><button aria-controls="recent" aria-selected="false" class="nav-link" data-bs-target="#popular" data-bs-toggle="tab" id="popular-tab" role="tab" type="button">Popular</button></li>
+  </ul>
+  <!-- tab contents -->
+  <div class="tab-content" id="postsTabContent">
+    <!-- loader -->
+    <div class="lds-dual-ring"></div>
+    <!-- recent posts -->
+    <div aria-labelledby="recent-tab" class="tab-pane fade show active" id="recent" role="tabpanel" wfd-invisible="true">
+      
+      {%for allposts in posts %}
+      {%if forloop.counter < 5%}
+          <!-- post -->
+          <div class="post post-list-sm circle">
+            <div class="thumb circle">
+              <a href="{{allposts.slug}}">
+                <div class="inner">
+                  {%if allposts.image %}
+                  <img src="{{allposts.image.url}}" alt="" width="100" height="100">
+                  {%endif%}
+                </div>
+              </a>
+            </div>
+            <div class="details clearfix">
+              <h6 class="post-title my-0"><a href="post/{{allposts.slug}}">{{allposts.title}}</a></h6>
+              <ul class="meta list-inline mt-1 mb-0">
+                <li class="list-inline-item">{{allposts.created_on}}</li>
+              </ul>
+            </div>
+          </div>
+          {%endif%}
+          {%endfor%}
+      
+    </div>
+    <!-- popular posts -->
+
+    <div aria-labelledby="popular-tab" class="tab-pane fade" id="popular" role="tabpanel">
+
+      {%for allpopular in popularpost %}
+      {%if forloop.counter < 5%}
+          <!-- post -->
+          <div class="post post-list-sm circle">
+            <div class="thumb circle">
+              <a href="post/{{allpopular.slug}}">
+                <div class="inner">
+                  {% if allpopular.image %}
+                  <img src="{{allpopular.image.url}}" alt="{{allpopular.imagealt}}" width="100" height="100">
+                  {%endif%}
+                </div>
+              </a>
+            </div>
+            <div class="details clearfix">
+              <h6 class="post-title my-0"><a href="katen/your-light-is-about-to-stop-being-relevant.html?hsLang=en">{{allpopular.title}}</a></h6>
+              <ul class="meta list-inline mt-1 mb-0">
+                <li class="list-inline-item">{{allpopular.updated_on}}</li>
+              </ul>
+            </div>
+          </div>
+          
+          {%endif%}
+          {%endfor%}
+            </div>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 dnd_area-row-1-padding dnd-section dnd_area-row-1-margin">
+<div class="row-fluid ">
+<div class="span8 widget-span widget-type-cell dnd_area-column-5-padding dnd-column" style="" data-widget-type="cell" data-x="0" data-w="8">
+<!--end row-wrapper -->
+
+<!-- <div class="row-fluid-wrapper row-depth-1 row-number-6 dnd_area-column-5-row-1-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12"> -->
+
+<!-- </div> -->
+<!--end widget-span -->
+<!-- </div> -->
+<!--end row-->
+<!-- </div> -->
+<!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 dnd_area-column-5-row-2-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-8" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+<!-- section header -->
+<div class="section-header">
+  <h3 class="section-title">Trending</h3>
+  
+    <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+  
+</div>
+
+
+<div class="padding-30 rounded bordered ">
+  <div class="row gy-5">
+    <div class="col-sm-6">
+    
+  
+            <!-- post -->
+            {%for allpopular in popularpost%}
+    {%if forloop.counter < 2%}
+
+            <div class="post thumb-240">
+              <div class="thumb rounded">
+                
+                  <a href="{{allpopular.category_id.category_slug}}" class="category-badge position-absolute">{{allpopular.category_id}}</a>
+                
+                <span class="post-format">
+                  <i class="icon-fire"></i>
+                </span>
+                <a href="post/{{allpopular.slug}}">
+                  <div class="inner">
+                    {% if allpopular.image %}
+                    <img width="550" height="395" src="{{allpopular.image.url}}" alt="">
+                    {%endif%}
+                  </div>
+                </a>
+              </div>
+              <ul class="meta list-inline mt-4 mb-0">
+                
+                  <li class="list-inline-item"><div class="author-wrapper"><img width="80" height="80" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/about148c.jpg?width=80&amp;height=80&amp;name=about.jpg" class="author" alt="Katen Doe"></div>{{allpopular.author.first_name}}</li>
+                
+                
+                  <li class="list-inline-item">{{allpopular.updated_on}}</li>
+                
+              </ul>
+              <h4 class="post-title mb-3 mt-3"><a href="post/{{allpopular.slug}}">{{allpopular.title}}</a></h4>
+              <p>{{allpopular.post_description|safe|slice:100}}</p>
+            </div>
+        
+    {%endif%}
+    {%endfor%}
+    
+    
+             {%for allpopular in popularpost reversed%}
+    {%if forloop.counter < 4%}
+            <!-- post -->
+            <div class="post post-list-sm square before-seperator thumb-80">
+              <div class="thumb rounded">
+                <a href="post/{{allpopular.slug}}">
+                  <div class="inner">
+                    {%if allpopular.image %}
+                    <img src="{{allpopular.image.url}}" width="110" height="80" alt="{{allpopular.imagealt}}">
+                    {%endif%}
+                  </div>
+                </a>
+              </div>
+              <div class="details clearfix">
+                <h6 class="post-title my-0"><a href="post/{{allpopular.slug}}">{{allpopular.title}}</a></h6>
+                
+                  <ul class="meta list-inline mt-1 mb-0">
+                    <li class="list-inline-item">{{allpopular.updated_on}}</li>
+                  </ul>
+                
+              </div>
+            </div>
+            {%endif%}
+            {%endfor%}
+    
+    </div>
+
+    <div class="col-sm-6">
+    
+    
+    
+      {%for allpopular in popularpost reversed%}
+      {%if forloop.first%}
+            <!-- post -->
+            <div class="post thumb-240">
+              <div class="thumb rounded">
+                
+                  <a href="category/{{allpopular.category_id.category_slug}}" class="category-badge position-absolute">{{allpopular.category_id}}</a>
+                
+                <span class="post-format">
+                  <i class="icon-fire"></i>
+                </span>
+                <a href="post/{{allpopular.slug}}">
+                  <div class="inner">
+                    {%if allpopular.image %}
+                    <img width="550" height="395" src="{{allpopular.image.url}}" alt="{{allpopular.imagealt}}">
+                    {%endif%}
+                  </div>
+                </a>
+              </div>
+              <ul class="meta list-inline mt-4 mb-0">
+                
+                  <li class="list-inline-item"><div class="author-wrapper"><img width="80" height="80" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/about148c.jpg?width=80&amp;height=80&amp;name=about.jpg" class="author" alt="Katen Doe"></div>{{allpopular.author.first_name}}</li>
+                
+                
+                  <li class="list-inline-item">{{allpopular.updated_on}}</li>
+                
+              </ul>
+              <h4 class="post-title mb-3 mt-3"><a href="post/{{allpopular.slug}}">{{allpopular.title}}</a></h4>
+              <p>{{allpopular.post_description|safe|slice:100}}</p>            </div>
+            {%endif%}
+            {%endfor%}
+    
+    
+    
+    
+            {%for allpopular in popularpost%}
+            {%if forloop.counter < 4%}  
+            <!-- post -->
+            <div class="post post-list-sm square before-seperator thumb-80">
+              <div class="thumb rounded">
+                <a href="post/{{allpopular.slug}}">
+                  <div class="inner">
+                    {% if allpopular.image %}
+                    <img src="{{allpopular.image.url}}" width="110" height="80" alt="{{allpopular.imagealt}}">
+                    {%endif%}
+                  </div>
+                  </a>
+              </div>
+              <div class="details clearfix">
+                <h6 class="post-title my-0"><a href="post/{{allpopular.slug}}">{{allpopular.title}}</a></h6>
+                
+                  <ul class="meta list-inline mt-1 mb-0">
+                    <li class="list-inline-item">{{allpopular.updated_on}}</li>
+                  </ul>
+                
+              </div>
+            </div>
+            {%endif%}
+            {%endfor%}
+    
+    
+  </div>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 dnd_area-column-5-row-3-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-9" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row dnd_area-column-5-row-4-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-10" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+<!-- section header -->
+<div class="section-header">
+  <h3 class="section-title">Latest Posts</h3>
+  
+    <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+  
+</div>
+
+
+<div class="padding-30 rounded bordered ">
+
+  <div class="row">
+    {% for allpost in posts.all %}
+    {%if forloop.counter < 5%}
+      <div class="col-md-12 col-sm-6">
+        <!-- post -->
+        <div class="post thumb-200 post-list clearfix">
+          <div class="thumb rounded">
+            <a href="post/{{allpost.slug}}">
+              <div class="inner">
+                {%if allpost.image %}
+                <img width="550" height="415" src="{{allpost.image.url}}" alt="">
+                {%endif%}
+              </div>
+            </a>
+          </div>
+          <div class="details">
+            <ul class="meta list-inline mb-3">
+              
+                <li class="list-inline-item"><a href="katen/author/katen-doe.html?hsLang=en"><div class="author-wrapper"><img width="80" height="80" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/about148c.jpg?width=80&amp;height=80&amp;name=about.jpg" class="author" alt="Katen Doe"></div>{{allpost.author}}</a></li>
+              
+              
+                <li class="list-inline-item"><a href="{{allpost.category_id.category_slug}}">{{allpost.category_id }}</a></li>
+              
+              
+                <li class="list-inline-item">{{allpost.created_on}}</li>
+              
+            </ul>
+            <h4 class="post-title"><a href="post/{{allpost.slug}}">{{allpost.title}}</a></h4>
+            <p>{{allpost.post_description|safe|slice:100}}</p>
+            <div class="post-bottom clearfix d-flex align-items-center">
+              <div class="social-share me-auto">
+                <button class="toggle-button icon-share"></button>
+                <ul class="icons list-unstyled list-inline mb-0">
+                  <li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a target="_blank" href="https://twitter.com/intent/tweet?url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li class="list-inline-item"><a target="_blank" href="https://pinterest.com/pin/create/button/?url=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="fab fa-pinterest"></i></a></li>
+                  <li class="list-inline-item"><a target="_blank" href="mailto:info@example.com?&amp;subject=&amp;cc=&amp;bcc=&amp;body=http://themeger-20055220.hs-sites.com/katen/16-unheard-ways-to-achieve-greater-walker"><i class="far fa-envelope"></i></a></li>
+                </ul>
+              </div>
+              <div class="more-button float-end">
+                <a href="katen/16-unheard-ways-to-achieve-greater-walker.html?hsLang=en"><span class="icon-options"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endif%}
+    {%endfor%}
+  </div>
+
+  <!-- button -->
+  <div class="text-center">
+    
+    
+    
+    
+    
+    <a class="btn btn-simple" href="katen.html?hsLang=en">
+      More Posts
+    </a>
+  </div>
+
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell dnd_area-column-11-padding dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row dnd_area-column-11-row-0-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-12" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><!-- widget about -->
+<div class="widget rounded">
+  <div class="widget-about data-bg-image text-center" data-bg-image="../f.hubspotusercontent20.net/hubfs/20055220/map-bg.png">
+    <div class="mb-4">
+      <span id="hs_cos_wrapper_dnd_area-module-12_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="home.html" id="hs-link-dnd_area-module-12_" style="border-width:0px;border:0px;"><img src="https://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/logo-1.svg" class="hs-image-widget " style="width:118px;border-width:0px;border:0px;" width="118" alt="" title=""></a></span>
+    </div>
+    <div id="hs_cos_wrapper_dnd_area-module-12_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="content"><p style="text-align: center;"><span>Hello, We’re a content writer who is fascinated by content fashion, celebrity, and lifestyle. We help clients bring the right content to the right people.</span></p></div>
+    <ul class="social-icons list-unstyled list-inline mb-0">
+    
+      
+      
+      
+      
+      
+        
+      
+
+      
+        
+      
+
+      <li class="list-inline-item">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_dnd_area-module-12_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 264 512" aria-labelledby="facebook-f1" role="img"><title id="facebook-f1">Follow us on Facebook</title><g id="facebook-f1_layer"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+
+      
+        
+      
+
+      <li class="list-inline-item">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_dnd_area-module-12__2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="linkedin-in2" role="img"><title id="linkedin-in2">Follow us on LinkedIn</title><g id="linkedin-in2_layer"><path d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+
+      
+        
+      
+
+      <li class="list-inline-item">
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_dnd_area-module-12__3" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-labelledby="twitter3" role="img"><title id="twitter3">Follow us on Twitter</title><g id="twitter3_layer"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" /></g></svg></span>
+        </a>
+      </li>
+    
+      
+      
+      
+      
+      
+        
+      
+
+      
+        
+      
+
+      <li class="list-inline-item">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <span id="hs_cos_wrapper_dnd_area-module-12__4" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon social-links__icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-labelledby="instagram4" role="img"><title id="instagram4">Follow us on Instagram</title><g id="instagram4_layer"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></g></svg></span>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 dnd_area-column-11-row-1-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-13" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<!-- widget popular posts -->
+<div class="widget rounded ">
+  
+    <div class="widget-header text-center">
+      <h4 class="widget-title">Popular Posts</h4>
+      
+        <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+      
+    </div>
+  
+  
+  <div class="widget-content">
+    
+      <!-- post -->
+      <div class="post post-list-sm counter circle">
+        <div class="thumb circle">
+          <a href="katen/your-light-is-about-to-stop-being-relevant.html?hsLang=en">
+            <div class="inner">
+              <img width="100" height="100" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/david-van-dijk-255503-unsplash4f4c.jpg?width=100&amp;height=100&amp;name=david-van-dijk-255503-unsplash.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="details clearfix">
+          <h6 class="post-title my-0"><a href="katen/your-light-is-about-to-stop-being-relevant.html?hsLang=en">Your Light Is About To Stop Being Relevant</a></h6>
+          <ul class="meta list-inline mt-1 mb-0">
+            
+              <li class="list-inline-item">24 May 2021</li>
+            
+          </ul>
+        </div>
+      </div>
+    
+      <!-- post -->
+      <div class="post post-list-sm counter circle">
+        <div class="thumb circle">
+          <a href="katen/16-unheard-ways-to-achieve-greater-walker.html?hsLang=en">
+            <div class="inner">
+              <img width="100" height="100" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/jason-briscoe-105344-unsplashfbdf.jpg?width=100&amp;height=100&amp;name=jason-briscoe-105344-unsplash.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="details clearfix">
+          <h6 class="post-title my-0"><a href="katen/16-unheard-ways-to-achieve-greater-walker.html?hsLang=en">16 Unheard Ways To Achieve Greater Walker</a></h6>
+          <ul class="meta list-inline mt-1 mb-0">
+            
+              <li class="list-inline-item">24 May 2021</li>
+            
+          </ul>
+        </div>
+      </div>
+    
+      <!-- post -->
+      <div class="post post-list-sm counter circle">
+        <div class="thumb circle">
+          <a href="katen/5-easy-ways-you-can-turn-future-into-success.html?hsLang=en">
+            <div class="inner">
+              <img width="100" height="100" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/grant-ritchie-HpuTe__oAlE-unsplash44ab.jpg?width=100&amp;height=100&amp;name=grant-ritchie-HpuTe__oAlE-unsplash.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="details clearfix">
+          <h6 class="post-title my-0"><a href="katen/5-easy-ways-you-can-turn-future-into-success.html?hsLang=en">5 Easy Ways You Can Turn Future Into Success</a></h6>
+          <ul class="meta list-inline mt-1 mb-0">
+            
+              <li class="list-inline-item">21 May 2021</li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  </div>		
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 dnd_area-column-11-row-2-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-14" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="widget rounded ">
+  
+    <div class="widget-header text-center">
+      <h4 class="widget-title">Explore Topics</h4>
+      
+        <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+      
+    </div>
+  
+  
+  <div class="widget-content">
+    
+    <ul class="list">
+    
+      <li><a href="katen/tag/culture.html?hsLang=en">Culture</a></li>
+    
+      <li><a href="katen/tag/lifestyle.html?hsLang=en">Lifestyle</a></li>
+    
+      <li><a href="katen/tag/pick.html?hsLang=en">Pick</a></li>
+    
+      <li><a href="katen/tag/trending.html?hsLang=en">Trending</a></li>
+    
+      <li><a href="katen/tag/fashion.html?hsLang=en">Fashion</a></li>
+    
+      <li><a href="katen/tag/inspiration.html?hsLang=en">Inspiration</a></li>
+    
+      <li><a href="katen/tag/politic.html?hsLang=en">Politic</a></li>
+    
+      <li><a href="katen/tag/featured.html?hsLang=en">Featured</a></li>
+    
+    </ul>
+  </div>		
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 dnd_area-column-11-row-3-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-15" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="widget rounded ">
+  
+    <div class="widget-header text-center">
+      <h4 class="widget-title">Newsletter</h4>
+      
+        <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+      
+    </div>
+  
+  
+  <div class="widget-content">
+    <span class="newsletter-headline text-center mb-3"><div id="hs_cos_wrapper_dnd_area-module-15_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" data-hs-cos-field="headline_text">Join 70,000 subscribers!</div></span>
+    <span id="hs_cos_wrapper_dnd_area-module-15_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_form_651497037_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+
+<div id="hs_form_target_form_651497037"></div>
+
+
+
+
+
+
+
+
+
+</span>
+    <span class="newsletter-privacy text-center mt-3"><div id="hs_cos_wrapper_dnd_area-module-15_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" data-hs-cos-field="footer_text">By signing up, you agree to our Privacy Policy</div></span>
+  </div>		
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 dnd_area-column-11-row-4-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-16" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<div class="widget rounded ">
+  
+    <div class="widget-header text-center">
+      <h4 class="widget-title">Celebration</h4>
+      
+        <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+      
+    </div>
+  
+  
+  <div class="widget-content">
+    <div class="post-carousel-widget">
+      
+        <!-- post -->
+        <div class="post thumb-200 post-carousel">
+          <div class="thumb rounded">
+            
+              <a href="katen/tag/lifestyle.html?hsLang=en" class="category-badge position-absolute">Lifestyle</a>
+            
+            <a href="katen/16-unheard-ways-to-achieve-greater-walker.html?hsLang=en">
+              <div class="inner">
+                <img width="300" height="200" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/jason-briscoe-105344-unsplash2ced.jpg?width=300&amp;height=200&amp;name=jason-briscoe-105344-unsplash.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <h4 class="post-title mb-0 mt-4"><a href="katen/16-unheard-ways-to-achieve-greater-walker.html?hsLang=en">16 Unheard Ways To Achieve Greater Walker</a></h4>
+          <ul class="meta list-inline mt-2 mb-0">
+            
+              <li class="list-inline-item"><a href="katen/author/katen-doe.html?hsLang=en">Katen Doe</a></li>
+            
+            
+              <li class="list-inline-item">24 May 2021</li>
+            
+          </ul>
+        </div>
+      
+        <!-- post -->
+        <div class="post thumb-200 post-carousel">
+          <div class="thumb rounded">
+            
+              <a href="katen/tag/inspiration.html?hsLang=en" class="category-badge position-absolute">Inspiration</a>
+            
+            <a href="katen/the-next-60-things-to-immediately-do-about-building.html?hsLang=en">
+              <div class="inner">
+                <img width="300" height="200" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/_evstratov_-U7stODj21DU-unsplashfef1.jpg?width=300&amp;height=200&amp;name=_evstratov_-U7stODj21DU-unsplash.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <h4 class="post-title mb-0 mt-4"><a href="katen/the-next-60-things-to-immediately-do-about-building.html?hsLang=en">The Next 60 Things To Immediately Do About Building</a></h4>
+          <ul class="meta list-inline mt-2 mb-0">
+            
+              <li class="list-inline-item"><a href="katen/author/katen-doe.html?hsLang=en">Katen Doe</a></li>
+            
+            
+              <li class="list-inline-item">24 May 2021</li>
+            
+          </ul>
+        </div>
+      
+        <!-- post -->
+        <div class="post thumb-200 post-carousel">
+          <div class="thumb rounded">
+            
+              <a href="katen/tag/lifestyle.html?hsLang=en" class="category-badge position-absolute">Lifestyle</a>
+            
+            <a href="katen/secrets-your-parents-never-told-you-about-bulb.html?hsLang=en">
+              <div class="inner">
+                <img width="300" height="200" src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/ian-tormo-340787-unsplash8f31.jpg?width=300&amp;height=200&amp;name=ian-tormo-340787-unsplash.jpg" alt="">
+              </div>
+            </a>
+          </div>
+          <h4 class="post-title mb-0 mt-4"><a href="katen/secrets-your-parents-never-told-you-about-bulb.html?hsLang=en">Secrets Your Parents Never Told You About Bulb</a></h4>
+          <ul class="meta list-inline mt-2 mb-0">
+            
+              <li class="list-inline-item"><a href="katen/author/katen-doe.html?hsLang=en">Katen Doe</a></li>
+            
+            
+              <li class="list-inline-item">24 May 2021</li>
+            
+          </ul>
+        </div>
+      
+    </div>
+    <!-- carousel arrows -->
+    <div class="slick-arrows-bot">
+      <button type="button" data-role="none" class="carousel-botNav-prev slick-custom-buttons" aria-label="Previous"><i class="icon-arrow-left"></i></button>
+      <button type="button" data-role="none" class="carousel-botNav-next slick-custom-buttons" aria-label="Next"><i class="icon-arrow-right"></i></button>
+    </div>
+  </div>		
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 dnd_area-column-11-row-5-padding dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-17" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="text-md-center">
+  <span class="ads-title"><div id="hs_cos_wrapper_dnd_area-module-17_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" data-hs-cos-field="ads_title">- Sponsored Ad -</div></span>
+  <div id="hs_cos_wrapper_dnd_area-module-17_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="inline_rich_text" data-hs-cos-field="content"><img src="../20055220.fs1.hubspotusercontent-na1.net/hub/20055220/hubfs/ad-360a1d1.png?width=356&amp;name=ad-360.png" alt="ad-360" width="356" loading="lazy" style="width: 356px;"></div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row dnd_area-column-11-row-6-padding">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_dnd_area-module-18" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="widget rounded ">
+  
+    <div class="widget-header text-center">
+      <h4 class="widget-title">Tag Clouds</h4>
+      
+        <img src="http://20055220.fs1.hubspotusercontent-na1.net/hubfs/20055220/raw_assets/public/katen/images/wave.svg" class="wave" alt="wave">
+      
+    </div>
+  
+  
+  <div class="widget-content">
+    
+    {%for categories in category%}
+    {% if categories.post_count > 0 %} 
+      <a href="category/{{categories.category_slug}}" class="tag">{{categories.category_title}}</a>
+      {%endif%}
+      {% endfor %}
+  </div>		
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+</main>
+{% endblock body %}
